@@ -1,21 +1,8 @@
-# Navigate
-
-- [Word2Vec Tutorial Notebook](Word2Vec.ipynb)
-- [Working Word2Vec python scripts](scripts/)
-- [OpinRank Word2Vec dataset](reviews_data.txt.gz)
-
-
-# Running the Word2Vec Tutorial Notebook
+# Running the Word2Vec Tutorial
 1. From the command line, first, clone this repo.
 ```
 git clone <this repo url>
 ```
-2. Next, switch to the word2vec directory of this repo.
-```
-cd  nlp-in-practice/word2vec
-```
-3. Then, run jupyter notebook
-```
-jupyter notebook
-```
-4. Select Word2Vec.ipynb, sip a cup of coffee and enjoy! You can now re-run the cells.
+2. Run `python3 scripts/word2vec.py` to create the model (should take about 15 minutes).  It's going to make a model of hotel reviews by default.  Change the input file on line 35.
+
+3. Review and test the model by running `python 3 scripts/loadAndTestModel.py`.  You can add more tests to that file.
