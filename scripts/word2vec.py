@@ -9,8 +9,8 @@ logging.basicConfig(
     level=logging.INFO)
 
 # switch between these to build a model either on hotel reviews, or on HR search queries
-# dataset_file = "../reviews_data.txt.gz"
-dataset_file = "../search-results-by-url.csv"
+dataset_file = "../reviews_data.txt.gz"
+# dataset_file = "../search-results-by-url.csv"
 
 def show_file_contents(input_file):
     df = pd.read_csv(input_file, encoding='utf-8', header=0, dtype=str)
@@ -107,7 +107,7 @@ if __name__ == '__main__':
         min_count=2,
         workers=10)
 
-    model.train(documents, total_examples=len(documents), epochs=10)
+    model.train(documents, total_examples=len(documents), epochs=1)
 
     # Split the file location into directory path and file name with extension
     dir_path, file_name_ext = os.path.split(dataset_file)
